@@ -9,6 +9,8 @@
 </template>
 
 <style lang="scss">
+@import "bootstrap/scss/bootstrap";
+@import '@vueform/vueform/themes/bootstrap/scss/index.scss';
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
