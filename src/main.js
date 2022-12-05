@@ -1,7 +1,6 @@
 import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
-import VueHead from 'vue-head'
 import Vuelidate from 'vuelidate'
 import Toasted from 'vue-toasted';
 import { createPinia } from "pinia";
@@ -9,7 +8,6 @@ import { useUserStore } from "@/store/UserStore";
 
 // import 'path/to/main.scss'
 
-Vue.use(VueHead)
 Vue.use(Vuelidate)
 Vue.use(createPinia())
 Vue.use(Toasted,{
