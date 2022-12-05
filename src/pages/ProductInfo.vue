@@ -1,5 +1,7 @@
 <script>
 import axios from "axios";
+import 'animate.css';
+
 export default {
   data() {
     return {
@@ -20,7 +22,7 @@ export default {
 <template>
   <div class="container-fluid px-5">
     <main class="row flex-column flex-md-row">
-      <div class="col-12 col-md-6 py-3 px-3">
+      <div class="col-12 col-md-6 py-3 px-3 animate__animated animate__zoomIn delay-1s">
         <img
           :src="details.image"
           :alt="details.name"
@@ -28,8 +30,8 @@ export default {
         />
       </div>
       <div class="col-12 col-md-6 pb-4">
-        <h1 >{{ details.name }}</h1>
-        <div class="h5 mb-5 d-flex flex-row gap-1">
+        <h1 class="">{{ details.name }}</h1>
+        <div class="h5 mb-5 d-flex flex-row gap-1 animate__animated animate__fadeInDown">
           <span
             class="text-success border border-2 border-success rounded rounded-pill px-2"
             >{{ details.price }}$</span
@@ -39,10 +41,10 @@ export default {
             >{{ details.type }}</span
           >
         </div>
-        <h2 class="border-bottom border-3 border-danger w-fit d-inline-block pb-1 mb-4">Description</h2>
-        <p class="fs-5 mb-md-4">{{details.description}}</p>
-        <span class="fs-5 mb-2 fw-bold d-block">Seller: <span class="text-danger">Amazon.eg</span></span>
-        <span class="fs-5 mb-4 fw-bold d-block">Purchased: <span class="text-danger">450<sub>times</sub></span></span>
+        <h2 class="border-bottom border-3 border-danger w-fit d-inline-block pb-1 mb-4 animate__animated animate__fadeInDown">Description</h2>
+        <p class="fs-5 mb-md-4 animate__animated animate__fadeInUp">{{details.description}}</p>
+        <span class="fs-5 mb-2 fw-bold d-block ">Seller: <span class="text-danger">Amazon.eg</span></span>
+        <span class="fs-5 mb-4 fw-bold d-block ">Purchased: <span class="text-danger">450<sub>times</sub></span></span>
         <div class="row">
             <div class="col-12 mt-md-5">
                 <router-link to="/products" class="btn btn-outline-danger rounded rounded-2 mt-md-5">All products</router-link>

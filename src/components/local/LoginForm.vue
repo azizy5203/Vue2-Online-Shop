@@ -2,6 +2,8 @@
 import { useUserStore } from "@/store/UserStore";
 import { mapActions, mapStores, mapWritableState } from "pinia";
 import { alphaNum, email, minLength, required } from "vuelidate/lib/validators";
+import 'animate.css';
+
 
 export default {
   name: "LoginForm",
@@ -63,8 +65,8 @@ export default {
   <div class="container-fluid">
     <div class="row">
       <div class="col-10 col-md-5 m-auto">
-        <h1 class="title text-center mb-5">LOGIN</h1>
-        <form class="d-flex flex-column gap-4">
+        <h1 class="title text-center mb-5 animate__animated animate__fadeInDown ">LOGIN</h1>
+        <form class="d-flex flex-column gap-4 animate__animated animate__fadeInUp">
           <div class="form-floating">
             <input
               type="email"

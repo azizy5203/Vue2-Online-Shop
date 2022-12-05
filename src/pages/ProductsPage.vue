@@ -68,7 +68,7 @@ export default {
         </div>
     </div>
     <h1 v-if="searched&&searchList.length==0" class="text-center">Didn't find any match try again</h1>
-    <main v-else class="cards-wrapper row pb-4">
+    <main v-else class="cards-wrapper row pb-4 animate__animated animate__fadeInUpBig">
       <div v-for="prod in viewList">
         <ProductCard
           :id="prod.id"
