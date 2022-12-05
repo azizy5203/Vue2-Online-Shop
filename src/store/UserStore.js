@@ -16,7 +16,7 @@ export const useUserStore = defineStore("user", {
             var Name = null
             var Token = null
             await axios
-            .post("http://localhost:8080/api/authaccount/login", {"email":email,"password":password}, {
+            .post("api/authaccount/login", {"email":email,"password":password}, {
                 mode: "no-cors",
                 headers: {
                     "Access-Control-Allow-Origin": "*",
