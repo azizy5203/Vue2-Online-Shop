@@ -58,7 +58,7 @@ export default {
         <div class="row px-md-2 m-auto ">
           <div class=" m-auto flex-col-reverse d-md-flex justify-content-between">
             <span class="text-light ms-3 mx-md-0 my-auto fw-bold">Price: {{this.price}}</span>
-            <router-link to="/" class="btn ms-4 mt-4 m-md-0 btn-danger rounded rounded-pill">more</router-link>
+            <router-link :to="'/products/' + this.id" class="btn ms-4 mt-4 m-md-0 btn-danger rounded rounded-pill">more</router-link>
           </div>
         </div>
       </div>
