@@ -27,7 +27,7 @@ export default {
       this.$v.$touch();
       if (this.$v.$pending || this.$v.error) return
         await this.login(this.email, this.password)
-        .then(() => { this.$toasted.success("Login Successful")})
+        .then(() => { this.$toasted.success("Login Successful, Refresh!")})
         .catch((err) => this.$toasted.error(err))
         .then(() => {
           if (this.storeName && this.storeToken) this.$router.push("/products");
