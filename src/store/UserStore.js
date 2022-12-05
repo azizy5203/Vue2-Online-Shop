@@ -32,7 +32,7 @@ export const useUserStore = defineStore("user", {
                     Token = data.data.Token;
                 }
             })
-            .catch((e) => console.log("in action error:", e));
+            .catch((e) => {return console.log("in action error:", e)});
             this.Id = Id
             this.Email = Email
             this.Name = Name;
