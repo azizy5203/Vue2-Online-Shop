@@ -3,6 +3,7 @@ import App from './App.vue'
 import router from './router'
 import VueHead from 'vue-head'
 import Vuelidate from 'vuelidate'
+import Toasted from 'vue-toasted';
 import { createPinia } from "pinia";
 import { useUserStore } from "@/store/UserStore";
 
@@ -11,6 +12,10 @@ import { useUserStore } from "@/store/UserStore";
 Vue.use(VueHead)
 Vue.use(Vuelidate)
 Vue.use(createPinia())
+Vue.use(Toasted,{
+  duration:1500,
+  position:'top-center'  
+})
 
 const userStore = useUserStore()
 Vue.config.productionTip = false

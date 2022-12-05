@@ -21,17 +21,15 @@ export default {
     },
     ...mapActions(useUserStore, ["login"]),
     async submitForm() {
+      // alert("dd")
       this.$v.$touch();
-      if (this.$v.$pending || this.$v.error) return;
-      await this.login(this.email, this.password)
-      .then(
-        () => {
-        },
-        (err) => alert(err)
-      )
-      .then(()=>{
-        if(this.storeName&&this.storeToken) this.$router.push('/products')
-      })
+      if (this.$v.$pending || this.$v.error) return
+        await this.login(this.email, this.password)
+        .then(() => { this.$toasted.success("Login Successful")})
+        .catch((err) => this.$toasted.error(err))
+        .then(() => {
+          if (this.storeName && this.storeToken) this.$router.push("/products");
+        });
     },
     resetForm() {
       this.email = "";
@@ -116,8 +114,6 @@ export default {
             >
               reset
             </button>
-            <!-- <div class="col-6 m-auto"><button class="btn btn-success">submit</button></div>
-              <div class="col-6 m-auto"><button class="btn btn-secondary">reset</button></div> -->
           </div>
         </form>
       </div>

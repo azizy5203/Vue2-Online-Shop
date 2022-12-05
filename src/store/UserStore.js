@@ -24,9 +24,8 @@ export const useUserStore = defineStore("user", {
                 },
             })
             .then(function ({data}) {
-                if (data.code==1) {
-                    alert("errors: ", data.message);
-                } else {
+                if (data.code==1) return;
+                else {
                     Id = data.data.Id
                     Email = data.data.Email
                     Name = data.data.Name;

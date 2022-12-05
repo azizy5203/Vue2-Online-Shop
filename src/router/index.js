@@ -6,6 +6,7 @@ import ProductInfo from "@/pages/ProductInfo.vue";
 import { useUserStore } from "@/store/UserStore";
 import Vue from "vue";
 import VueRouter from "vue-router";
+import { setTimeout } from "core-js";
 
 Vue.use(VueRouter);
 
@@ -26,6 +27,7 @@ const routes = [
     path: "/products/:id",
     name: "ProductInfo",
     component: ProductInfo,
+    meta: { requiresAuth: true },
   },
   {
     path: "*",
@@ -49,9 +51,11 @@ router.beforeEach((to, from, next) => {
   if (to.meta.requiresAuth && !store.$state.Token) {
     next({ name: "LoginForm" });
   } else if (store.$state.Token && to.meta.isGuest) {
+    
     next({ name: "ProductsPage" });
   } else {
-    next();
+    setTimeout(()=>next(),500)
+    
   }
 });
 

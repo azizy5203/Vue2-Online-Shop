@@ -40,7 +40,7 @@ export default {
     <div class="visuals">
       <span class="effect-wrapper">
         <router-link :to="'/products/' + this.id">
-          <img :src="this.imgPath" class="w-100" :alt="this.name" />
+          <img :src="this.imgPath" class="w-100" :alt="this.name" loading="lazy"/>
         </router-link>
       </span>
     </div>
