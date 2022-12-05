@@ -8,6 +8,7 @@
 - Axios
 - Bootstrap 5
 - Vuelidate
+- Animate.css
 
 ## [Live Demo](https://youssefstore.netlify.app/)
 
