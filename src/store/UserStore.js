@@ -15,8 +15,10 @@ export const useUserStore = defineStore("user", {
             var Email = null
             var Name = null
             var Token = null
+            const port = 8080||process.env.PORT
+            const url = 'http://localhost' || process.env.BASE_URL
             await axios
-            .post(`http://restapi.adequateshop.com/api/authaccount/login`, {"email":email,"password":password}, {
+            .post(`${url}:${port}/api/authaccount/login`, {"email":email,"password":password}, {
                 mode: "no-cors",
                 headers: {
                     "Access-Control-Allow-Origin": "*",
